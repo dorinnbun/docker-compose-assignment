@@ -15,4 +15,4 @@ services:
       - ./api:/home/node/app
     command: "npm start"
     ports:
-      - "800:3000"
+      - "800:7000"
