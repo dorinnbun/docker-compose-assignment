@@ -1,11 +1,10 @@
-const express = require('express')
+const express = require('express');
 const app = express();
-const port = 3000;
 
-app.get('/', (req,res) => {
-    res.send('Hello from Express!');
+app.get('/user', (req, res) => {
+    res.send({ "id": 11, "name": "admin" });
 });
 
-app.listen(port, () => {
-    console.log(`Express Server listening at http://localhost:${3000}`);
+app.listen(5000, () => {
+    console.log('Express Server is Running at Port No 7000')
 });
