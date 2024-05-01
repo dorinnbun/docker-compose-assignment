@@ -7,5 +7,5 @@ app.get('/', (req,res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Express Server listening at http://localhost:${port}`);
+    console.log(`Express Server listening at http://localhost:${3000}`);
 });
