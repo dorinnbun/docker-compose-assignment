@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3'
 services:
   web:
     image: nginx:latest
@@ -8,11 +8,11 @@ services:
       - "8080:80"
   api:
     image: node:latest
-    working_dir: /home/node/app
+    working_dir: /usr/src/app
     environment:
       - NODE_ENV=production
     volumes:
       - ./api:/home/node/app
     command: "npm start"
     ports:
-      - "3000:3000"
+      - "800:7000"
