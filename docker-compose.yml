@@ -3,12 +3,14 @@ services:
   web:
     container_name: nginxserver
     build:
+      context: ./home/ubuntu/docker-folder/Dockerfile1
       dockerfile: Dockerfile1
     ports:
       - "9000:80"
   api:
     container_name: expressserver
-    build: 
+    build:
+      context: ./home/ubuntu/docker-folder/Dockerfile2 
       dockerfile: Dockerfile2
     ports:
       - "9001:7000"
