@@ -5,10 +5,10 @@ services:
     build:
       dockerfile: Dockerfile1
     ports:
-      - "8080:80"
+      - "9000:80"
   api:
     container_name: expressserver
     build: 
       dockerfile: Dockerfile2
     ports:
-      - "8081:7000"
+      - "9001:7000"
