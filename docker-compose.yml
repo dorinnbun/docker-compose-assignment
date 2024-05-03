@@ -7,12 +7,12 @@ services:
     ports:
       - "8080:80"
   api:
-    image: node:latest
-    working_dir: /usr/src/app
+    container_name: expressserver
+    build: 
+      dockerfile: Dockerfile
     environment:
       - NODE_ENV=production
     volumes:
       - ./api:/home/node/app
-    command: "npm start"
     ports:
-      - "800:7000"
+      - "8081:7000"
