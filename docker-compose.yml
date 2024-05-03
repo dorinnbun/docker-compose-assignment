@@ -1,14 +1,15 @@
 version: '3'
 services:
-  web:
-    container_name: nginxserver
-    build:
-      dockerfile: Dockerfile1
-    ports:
-      - "9000:80"
   api:
     container_name: expressserver
     build: 
       dockerfile: Dockerfile2
     ports:
       - "9001:7000"
+  web:
+    container_name: nginxserver
+    build:
+      dockerfile: Dockerfile1
+    ports:
+      - "9000:80"
+ 
